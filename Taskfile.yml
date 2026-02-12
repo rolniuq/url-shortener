@@ -1,0 +1,11 @@
+version: "3"
+
+tasks:
+  default:
+    cmds:
+      - echo "Hello, World!"
+
+  run:
+    cmds:
+      - go run cmd/main.go
+    desc: "Run the Go application"
