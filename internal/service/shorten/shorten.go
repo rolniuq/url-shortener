@@ -8,4 +8,5 @@ func NewShortenService() *ShortenService {
 }
 
 func (s *ShortenService) ShortenURL(longURL string) (string, error) {
+	return "", nil
 }
