@@ -5,8 +5,6 @@ import (
 	"math/big"
 )
 
-// const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
-
 func GenerateShortCode(charset string, length int) (string, error) {
 	result := make([]byte, length)
 

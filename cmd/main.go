@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"urlshorter/cmd/app"
-	"urlshorter/config"
+	"urlshorter/internal/config"
 )
 
 func main() {

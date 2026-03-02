@@ -3,6 +3,7 @@ package pgsql
 import (
 	"database/sql"
 	"fmt"
+	"urlshorter/internal/config"
 
 	_ "github.com/lib/pq"
 )
@@ -11,8 +12,8 @@ type PGSQL struct {
 	db *sql.DB
 }
 
-func NewPGSQL(connStr string) (*PGSQL, error) {
-	db, err := sql.Open("postgres", connStr)
+func NewPGSQL(config *config.Config) (*PGSQL, error) {
+	db, err := sql.Open("postgres", config.GetDBConnStr())
 	if err != nil {
 		return nil, fmt.Errorf("failed to connect to PostgreSQL: %w", err)
 	}
